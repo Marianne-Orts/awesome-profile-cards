@@ -1,4 +1,13 @@
 .page {
-  height: calc(100vh - 20px);
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 }
