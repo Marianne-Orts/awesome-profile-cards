@@ -1,19 +1,43 @@
 .landing {
+  margin-top: 35.4px;
+  @include center;
+  flex-direction: column;
+  text-align: center;
+  @include tablet {
+    margin-top: 31px;
+  }
   &__title {
     font-family: $fontTitle;
+    font-weight: 900;
+    @include t(19.2px, normal);
+    color: $colorBrandSide;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__text {
+    font-family: $fontMain;
+    @include t(12.8px, normal);
+    color: $colorBrandDark;
+    width: 331px;
+    @include tablet {
+      font-size: 16px;
+    }
   }
   &__icons {
+    margin-top: 17.8px;
     border: 1.6px solid rgba(225, 115, 52, 0.21);
     border-radius: 4px;
-    width: 268px;
-    padding: 15px 0 10px;
+    // width: 268px;
+    padding: 15px 20px 10px;
     display: grid;
     grid-template-columns: repeat(3, 60px);
     column-gap: 24px;
     justify-content: center;
     text-align: center;
     @include tablet {
-      width: 325px;
+      margin-top: 27px;
+      // width: 325px;
       grid-template-columns: repeat(3, 75px);
       column-gap: 30px;
       border-radius: 5px;
@@ -41,6 +65,7 @@
     height: 42px;
     background-color: $colorBrandMedium;
     border-radius: 21px;
+    margin-top: 38.6px;
     @include center;
     &--link {
       @include t(16px, normal);
