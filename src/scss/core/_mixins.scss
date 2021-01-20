@@ -17,6 +17,7 @@
 @mixin t($fontSize, $lineHeight) {
   font-size: $fontSize;
   line-height: $lineHeight;
+  // copy pasta ;) @include t (,)
 }
 
 @mixin center {
