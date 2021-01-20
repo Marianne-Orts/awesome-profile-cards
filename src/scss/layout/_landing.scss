@@ -1,0 +1,54 @@
+.landing {
+  &__title {
+    font-family: $fontTitle;
+  }
+  &__icons {
+    border: 1.6px solid rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+    width: 268px;
+    padding: 15px 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    column-gap: 24px;
+    justify-content: center;
+    text-align: center;
+    @include tablet {
+      width: 325px;
+      grid-template-columns: repeat(3, 75px);
+      column-gap: 30px;
+      border-radius: 5px;
+      border-width: 2px;
+    }
+    &--icon {
+      color: $colorBrandSide;
+      @include t(22.4px, normal);
+      @include tablet {
+        font-size: 28px;
+      }
+    }
+    &--title {
+      font-family: $fontMain;
+      color: $colorTextDark;
+      font-weight: 400;
+      @include t(12.8px, normal);
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+  &__nav {
+    width: 129px;
+    height: 42px;
+    background-color: $colorBrandMedium;
+    border-radius: 21px;
+    @include center;
+    &--link {
+      @include t(16px, normal);
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-family: $fontMain;
+      font-weight: 600;
+    }
+  }
+}

@@ -18,3 +18,20 @@
   font-size: $fontSize;
   line-height: $lineHeight;
 }
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// aplicaría en boton landing e colapsables de generator
+// @mixin collapsable {
+//   font-family: $fontMain;
+//   text-transform: uppercase;
+//   font-weight: 600
+//
+//   overwritten by content in some places:
+//   font-size: 18px; // overwritten in landing button
+//   color: white; // or $colorTextDark
+// }
