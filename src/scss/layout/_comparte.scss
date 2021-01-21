@@ -1,0 +1,58 @@
+.comparte__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comparte__nav--button {
+  width: 199px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: $colorBrandSide;
+  @include center;
+  @include t(18px, normal);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-family: $fontMain;
+  font-weight: 600;
+}
+//cambia color de fondo de boton
+/*.comparte__nav--buttongrey {
+  background-color: #d5d5d5;
+}*/
+.comparte__nav2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.comparte__nav2--text {
+  @include t(16px, normal);
+  color: $colorTextDark;
+  font-family: $fontMain;
+  font-weight: 600;
+}
+.comparte__nav2--link {
+  text-decoration: none;
+  color: $colorBrandSide;
+  font-size: 12px;
+}
+.comparte__nav2--button {
+  width: 181px;
+  height: 30px;
+  background-color: $colorTweeter;
+  border-radius: 3px;
+  text-align: center;
+}
+.fa-twitter {
+  color: white;
+  width: 18px;
+  height: 18px;
+}
+.comparte__nav2--link2 {
+  color: white;
+  font-size: 14px;
+  line-height: 1.43;
+  font-family: $fontMain;
+  text-decoration: none;
+}
