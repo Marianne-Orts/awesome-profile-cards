@@ -1,0 +1,15 @@
+//palettes
+.label__palette {
+  color: transparent;
+  height: 25px;
+  width: 90px;
+    &--One {
+        background: linear-gradient(to right, $colorBrandDark 33.33%, $colorBrandMedium 33.33%, $colorBrandMedium 66.66%, $colorBrandLight 66.66%);
+    }
+    &--Two {
+        background: linear-gradient(to right, $paletteTwoDark 33.33%, $paletteTwoMedium 33.33%, $paletteTwoMedium 66.66%, $paletteTwoLight 66.66%);
+    }
+    &--Three {
+        background: linear-gradient(to right, $paletteThreeDark 33.33%, $paletteThreeMedium 33.33%, $paletteThreeMedium 66.66%, $paletteThreeLight 66.66%);
+    }
+}
