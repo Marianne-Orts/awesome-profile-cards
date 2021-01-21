@@ -1,0 +1,80 @@
+.rellena {
+  margin-top: 61px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 72px;
+}
+
+.rellena-name {
+  &__label {
+    @include formRellenaLabels;
+  }
+  &__input-name {
+    @include formRellenaInput;
+  }
+}
+.rellena-position {
+  &__label {
+    @include formRellenaLabels;
+  }
+  &__input-position {
+    @include formRellenaInput;
+  }
+}
+.rellena-image {
+  &__label {
+    @include formRellenaLabels;
+  }
+  flex-direction: row;
+  justify-content: left;
+  &__add {
+    width: 140px;
+    height: 30px;
+    margin: 7px 20px 20px 0;
+    padding: 3px 22px 7px 0;
+    border-radius: 3px;
+    background-color: $colorBrandSide;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    color: white;
+    font-family: $fontMain;
+    font-size: 14px;
+  }
+  &__square {
+    width: 30px;
+    height: 30px;
+    margin: 7px 20px 20px 0;
+    border: 1px solid $colorBrandLight;
+  }
+}
+.rellena-mail {
+  &__label {
+    @include formRellenaLabels;
+  }
+  &__input-mail {
+    @include formRellenaInput;
+  }
+}
+.rellena-phone {
+  &__label {
+    @include formRellenaLabels;
+  }
+  &__input-phone {
+    @include formRellenaInput;
+  }
+}
+.rellena-linkedin {
+  &__label {
+    @include formRellenaLabels;
+  }
+  &__input-linkedin {
+    @include formRellenaInput;
+  }
+}
+.rellena-github {
+  &__label {
+    @include formRellenaLabels;
+  }
+  &__input-github {
+    @include formRellenaInput;
+  }
+}

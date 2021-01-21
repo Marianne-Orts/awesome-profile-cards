@@ -33,3 +33,18 @@
   font-size: 18px;
   color: $colorTextDark;
 }
+@mixin formRellenaLabels {
+  font-family: $fontMain;
+  font-size: 14px;
+  color: $colorBrandDark;
+  // copy pasta ;) @include formRellenaLabels
+}
+@mixin formRellenaInput {
+  width: 281px;
+  height: 18px;
+  padding: 3px 205px 7px 9px;
+  margin-top: 7px;
+  border: 1px solid $colorBrandLight;
+  color: $colorTextLight;
+  // copy pasta ;) @include formRellenaInput
+}
