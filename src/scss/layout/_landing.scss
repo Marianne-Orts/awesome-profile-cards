@@ -1,4 +1,11 @@
+.main--landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .landing {
+  align-self: start;
   margin-top: 35.4px;
   @include center;
   flex-direction: column;
@@ -19,12 +26,14 @@
     font-family: $fontMain;
     @include t(12.8px, normal);
     color: $colorBrandDark;
-    width: 331px;
+    width: 265px;
     @include tablet {
       font-size: 16px;
+      width: 331px;
     }
   }
   &__icons {
+    list-style-type: none;
     margin-top: 17.8px;
     border: 1.6px solid rgba(225, 115, 52, 0.21);
     border-radius: 4px;
