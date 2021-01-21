@@ -65,7 +65,7 @@
     height: 42px;
     background-color: $colorBrandMedium;
     border-radius: 21px;
-    margin-top: 38.6px;
+    margin-bottom: 5vh;
     @include center;
     &--link {
       @include t(16px, normal);

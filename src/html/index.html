@@ -20,14 +20,14 @@
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
 
-  <body>
-    <div class="page__container">
-      <div class="page">
-        <include src="./partials/header.html" logoClass="header__landing--img"></include>
-        <include src="./partials/landing.html"></include>
-      </div>
-      <include src="./partials/footer.html"></include>
-    </div>
+  <body class="page">
+    <include src="./partials/header.html" logoClass="header__landing--img"></include>
+    <include src="./partials/landing.html"></include>
+    <nav class="landing__nav">
+      <a class="landing__nav--link" href="./generator.html" title="Ir a creador de las tarjetas">Comenzar
+      </a>
+    </nav>
+    <include src="./partials/footer.html"></include>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
