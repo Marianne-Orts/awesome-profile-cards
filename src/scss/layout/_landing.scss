@@ -6,12 +6,12 @@
 }
 .landing {
   align-self: start;
-  margin-top: 35.4px;
+  margin-top: 6vh;
   @include center;
   flex-direction: column;
   text-align: center;
   @include tablet {
-    margin-top: 31px;
+    margin-top: 3vh;
   }
   &__title {
     font-family: $fontTitle;
@@ -34,18 +34,18 @@
   }
   &__icons {
     list-style-type: none;
-    margin-top: 17.8px;
+    margin-top: 3vh;
     border: 1.6px solid rgba(225, 115, 52, 0.21);
     border-radius: 4px;
     // width: 268px;
-    padding: 15px 20px 10px;
+    padding: 2.5vh 20px 1.8vh;
     display: grid;
     grid-template-columns: repeat(3, 60px);
     column-gap: 24px;
     justify-content: center;
     text-align: center;
     @include tablet {
-      margin-top: 27px;
+      margin-top: 2.6vh;
       // width: 325px;
       grid-template-columns: repeat(3, 75px);
       column-gap: 30px;
