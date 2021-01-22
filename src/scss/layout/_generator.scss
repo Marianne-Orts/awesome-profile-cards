@@ -1,0 +1,20 @@
+.legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &__icon {
+    &--main {
+      color: $colorBrandSide;
+      @include t(18px, normal);
+    }
+    &--arrow {
+      font-size: 18px;
+      color: $colorTextDark;
+    }
+  }
+  &__title {
+    margin-left: 10px;
+    flex-grow: 1;
+    @include formTitle;
+  }
+}
