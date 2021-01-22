@@ -18,3 +18,27 @@
     @include formTitle;
   }
 }
+
+.main__form {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row-reverse;
+    padding: 0 40px;
+  }
+  &--generate {
+    width: 329px;
+    @include tablet {
+      margin-right: 30px;
+    }
+  }
+}
+
+// .form {
+//   padding: 0 20px;
+// }
+
+.form {
+  background-image: linear-gradient(to bottom, $colorBackground, white 9%);
+}
+
