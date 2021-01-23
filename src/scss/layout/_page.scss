@@ -1,12 +1,15 @@
 .page {
   height: 100vh;
   display: grid;
+  grid-template-columns: minmax(auto, 1200px);
   grid-template-rows: 1fr 2fr auto;
+  justify-content: center;
   justify-items: center;
-  background-color: $colorBackground;
+  // background-color: $colorBackground;
+  background-image: linear-gradient(to top, white 60px, $colorBackground 60px);
 }
 
-.centralColumn {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+// .centralColumn {
+//   max-width: 1200px;
+//   padding: 0 50px;
+// }
