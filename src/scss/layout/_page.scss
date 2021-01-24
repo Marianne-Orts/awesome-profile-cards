@@ -3,8 +3,7 @@
   display: grid;
   grid-template-rows: 1fr 2fr auto;
   justify-items: center;
-  // background-color: $colorBackground;
-  background-image: linear-gradient(to top, white 60px, $colorBackground 60px);
+  background-color: $colorBackground;
 }
 
 // .centralColumn {
