@@ -22,6 +22,7 @@
 .main__form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-image: linear-gradient(to bottom, $colorBackground, white 9%);
   @include tablet {
     flex-direction: row-reverse;
