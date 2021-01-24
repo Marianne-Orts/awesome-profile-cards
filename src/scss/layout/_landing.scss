@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: $colorBackground;
+  // background-color: $colorBackground;
+  grid-row: 2;
 }
 .landing {
   align-self: start;
