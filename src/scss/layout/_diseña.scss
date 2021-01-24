@@ -32,7 +32,29 @@
     );
   }
 }
-.design__radio--input {
-    display: inline-block;
-    vertical-align: middle;
+
+//design
+.design {
+  &__radio {
+    margin: 30px 0 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 45px 45px 45px;
+    &--title {
+      @include t(14px, 5px);
+      font-family: $fontMain;
+      text-transform: uppercase;
+      color: $colorTextDark;
+    }
+    &--input {
+      height: 17px;
+      width: 17px;
+      justify-self: end;
+      margin: 4px 10px 4px 0;
+      grid-column: 2/3;
+    }
+    &--label {
+      grid-column: 3/4;
+    }
+  }
 }
