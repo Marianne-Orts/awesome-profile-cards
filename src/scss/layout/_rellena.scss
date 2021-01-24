@@ -1,88 +1,48 @@
 .rellena {
-  margin-top: 61px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 72px;
+  align-items: left;
+  &__icon {
+    margin-bottom: 10px;
+  }
 }
 
-.rellena-name {
-  margin-bottom: 15px;
+.field {
+  @include formRellenaField;
   &__label {
     @include formRellenaLabels;
   }
-  &__input-name {
+  &__input {
     @include formRellenaInput;
+    &::placeholder {
+      color: $colorTextPlaceholder;
+      line-height: 1.43;
+      text-indent: 9px;
+    }
   }
 }
-.rellena-position {
-  margin-bottom: 15px;
-  &__label {
-    @include formRellenaLabels;
-  }
-  &__input-position {
-    @include formRellenaInput;
-  }
-}
+
 .rellena-image {
-  margin-bottom: 15px;
-  &__label {
-    @include formRellenaLabels;
-  }
-  flex-direction: row;
-  justify-content: left;
+  display: flex;
   &__add {
     width: 140px;
     height: 30px;
-    margin: 7px 20px 20px 0;
-    padding: 3px 22px 7px 0;
+    margin: 7px 20px 0 0;
     border-radius: 3px;
     background-color: $colorBrandSide;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.68);
     color: white;
     font-family: $fontMain;
     font-size: 14px;
+    text-align: center;
   }
   &__square {
+    flex-direction: row;
+    justify-content: right;
     width: 30px;
     height: 30px;
-    margin: 7px 20px 20px 0;
+    margin: 7px 20px 0 0;
     border: 1px solid $colorBrandLight;
-  }
-}
-.rellena-mail {
-  margin-bottom: 15px;
-  &__label {
-    @include formRellenaLabels;
-  }
-  &__input-mail {
-    @include formRellenaInput;
-  }
-}
-.rellena-phone {
-  margin-bottom: 15px;
-  &__label {
-    @include formRellenaLabels;
-  }
-  &__input-phone {
-    @include formRellenaInput;
-  }
-}
-.rellena-linkedin {
-  margin-bottom: 15px;
-  &__label {
-    @include formRellenaLabels;
-  }
-  &__input-linkedin {
-    @include formRellenaInput;
-  }
-}
-.rellena-github {
-  margin-bottom: 15px;
-  &__label {
-    @include formRellenaLabels;
-  }
-  &__input-github {
-    @include formRellenaInput;
   }
 }
