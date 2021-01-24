@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  border-top: 1px solid $colorLine;
   background-color: white;
   flex-direction: column;
   justify-content: flex-end;
@@ -14,6 +15,7 @@
   &__small {
     font-family: $fontMain;
     color: $colorTextLight;
+    opacity: 0.5;
     @include t(14px, 20px);
     margin-bottom: 12px;
     @include tablet {
