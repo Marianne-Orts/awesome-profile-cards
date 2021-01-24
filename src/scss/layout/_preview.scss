@@ -13,8 +13,9 @@
   justify-content: center;
   @include tablet {
     border-radius: 6px;
-    height: 86vh;
+    height: auto;
     width: 329px;
+    align-self: stretch;
   }
   &__reset {
     align-self: end;
