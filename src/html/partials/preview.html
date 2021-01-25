@@ -4,8 +4,10 @@
   </button>
   <article class="preview__card">
     <div class="card__name">
-      <h2 class="card__name--fullname">Nombre Apellido</h2>
-      <h3 class="card__name--ocupation">Front-end developer</h3>
+      <h2 class="card__name--fullname js-fullnamePreview">Nombre Apellido</h2>
+      <h3 class="card__name--ocupation js-positionPreview">
+        Front-end developer
+      </h3>
     </div>
     <img
       class="card__photo"
@@ -14,10 +16,26 @@
     />
     <nav>
       <ul class="card__icons">
-        <li><i class="card__icons--icon fas fa-mobile-alt"></i></li>
-        <li><i class="card__icons--icon far fa-envelope"></i></li>
-        <li><i class="card__icons--icon fab fa-linkedin-in"></i></li>
-        <li><i class="card__icons--icon fab fa-github-alt"></i></li>
+        <li>
+          <a href="" class="js-phonePreview"
+            ><i class="card__icons--icon fas fa-mobile-alt"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="js-emailPreview"
+            ><i class="card__icons--icon far fa-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="js-linkedinPreview" target="_blank"
+            ><i class="card__icons--icon fab fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li>
+          <a href="" class="js-githubPreview" target="_blank"
+            ><i class="card__icons--icon fab fa-github-alt"></i
+          ></a>
+        </li>
       </ul>
     </nav>
   </article>
