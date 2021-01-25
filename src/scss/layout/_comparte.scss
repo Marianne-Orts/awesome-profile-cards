@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
+
   &--button {
     width: 199px;
     height: 50px;
@@ -14,6 +16,7 @@
     color: white;
     font-family: $fontMain;
     font-weight: 600;
+    justify-content: space-evenly;
   }
 }
 
@@ -25,35 +28,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
+  padding-top: 20px;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+
+  &--text {
+    @include t(16px, normal);
+    color: $colorTextDark;
+    font-family: $fontMain;
+    font-weight: 600;
+  }
+  &--link {
+    text-decoration: none;
+    color: $colorBrandSide;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  &--button {
+    width: 181px;
+    height: 30px;
+    background-color: $colorTweeter;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 3px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  &--link2 {
+    color: white;
+    font-size: 14px;
+    line-height: 1.43;
+    font-family: $fontMain;
+    text-decoration: none;
+  }
 }
-.comparte__nav2--text {
-  @include t(16px, normal);
-  color: $colorTextDark;
-  font-family: $fontMain;
-  font-weight: 600;
-}
-.comparte__nav2--link {
-  text-decoration: none;
-  color: $colorBrandSide;
-  font-size: 12px;
-}
-.comparte__nav2--button {
-  width: 181px;
-  height: 30px;
-  background-color: $colorTweeter;
-  border-radius: 3px;
-  text-align: center;
-}
+
 .fa-twitter {
   color: white;
   width: 18px;
   height: 18px;
-}
-.comparte__nav2--link2 {
-  color: white;
-  font-size: 14px;
-  line-height: 1.43;
-  font-family: $fontMain;
-  text-decoration: none;
 }
