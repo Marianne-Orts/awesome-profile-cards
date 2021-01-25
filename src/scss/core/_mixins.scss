@@ -42,14 +42,14 @@
   // copy pasta ;) @include formRellenaLabels
 }
 @mixin formRellenaInput {
-  width: 281px;
+  /* width: 281px; */
   height: 30px;
   margin-top: 7px;
   border: 1px solid $colorBrandLight;
   color: $colorTextLight;
   text-indent: 9px;
   @include tablet {
-    width: 329px;
+    /* width: 329px; */
     text-indent: 10px;
   }
   // copy pasta ;) @include formRellenaInput
