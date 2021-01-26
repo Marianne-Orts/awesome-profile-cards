@@ -30,8 +30,8 @@
   align-items: center;
   //justify-content: center;
   padding-top: 20px;
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
+  border-top: 1px solid $colorLine;
+  border-bottom: 1px solid $colorLine;
 
   &--text {
     @include t(16px, normal);
