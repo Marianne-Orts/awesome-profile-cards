@@ -7,7 +7,6 @@
   align-items: center;
   padding: 18px 0 20px 0;
   width: 100%;
-  grid-row: 3;
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
@@ -29,12 +28,11 @@
     @include t(14px, 20px);
     margin-bottom: 12px;
     @include tablet {
-      margin: 18px 0 22px 0;
+      margin: 1.75vh 0 2.1vh 0;
     }
   }
   &__link {
     width: 103px;
-    height: 40px;
     &--logo {
       width: inherit;
     }

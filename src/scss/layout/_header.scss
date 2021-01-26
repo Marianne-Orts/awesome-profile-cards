@@ -1,6 +1,5 @@
 .header {
   align-self: end;
-  grid-row: 1;
   &__title {
     display: none;
   }
@@ -9,6 +8,6 @@
   }
   &__generator--img {
     width: 201px;
-    margin: 30px 0px 30px 40px;
+    margin: 3vh 0 3vh 40px;
   }
 }
