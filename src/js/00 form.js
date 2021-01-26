@@ -49,10 +49,8 @@ function handleEmail(event) {
   const emailValue = event.target.value;
 
   if (emailValue === '') {
-    console.log('Ask Iván');
-    // emailPreviewElement.innerHTML = 'Front-end developer';
+    emailPreviewElement.href = '';
   } else {
-    console.log(emailPreviewElement);
     emailPreviewElement.href = `mailto: ${emailValue}`;
   }
 
@@ -65,10 +63,8 @@ function handlePhone(event) {
   const phoneValue = event.target.value;
 
   if (phoneValue === '') {
-    console.log('Ask Iván');
-    // phonePreviewElement.innerHTML = 'Front-end developer';
+    phonePreviewElement.href = '';
   } else {
-    console.log(phonePreviewElement);
     phonePreviewElement.href = `tel: ${phoneValue}`;
   }
 
@@ -81,10 +77,9 @@ function handleLinkedin(event) {
   const linkedinValue = event.target.value;
 
   if (linkedinValue === '') {
-    console.log('Ask Iván');
-    // linkedinPreviewElement.innerHTML = 'Front-end developer';
+    linkedinPreviewElement.href = '';
   } else {
-    console.log(linkedinPreviewElement);
+    // se supone que la usuaria pone el enlace entero
     linkedinPreviewElement.href = linkedinValue;
   }
 
@@ -97,10 +92,9 @@ function handleGithub(event) {
   const githubValue = event.target.value;
 
   if (githubValue === '') {
-    console.log('Ask Iván');
-    // githubPreviewElement.innerHTML = 'Front-end developer';
+    githubPreviewElement.href = '';
   } else {
-    console.log(githubPreviewElement);
+    // en github la usuaria se supone que pone solo su nombre de usuaria
     githubPreviewElement.href = githubValue;
   }
 
