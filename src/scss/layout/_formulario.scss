@@ -44,3 +44,14 @@
 // .form {
 //   background-image: linear-gradient(to bottom, $colorBackground, white 9%);
 // }
+
+.collapsable.collapsable--on {
+  .collapsable {
+    &--hide {
+      display: none;
+    }
+    &--close {
+      transform: rotate(180deg);
+    }
+  }
+}
