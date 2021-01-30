@@ -80,45 +80,51 @@
 
 // pallette 01
 
-// .palette01 {
-//   &--side {
-//     border-left: 5px solid $colorBrandMedium;
-//   }
-//   &--fullname {
-//     color: $colorBrandDark;
-//   }
-//   &--icon {
-//     border: 2px solid $colorBrandLight;
-//     color: $colorBrandDark;
-//   }
-// }
+.palette01 {
+  .color {
+    &--side {
+      border-left: 5px solid $colorBrandMedium;
+    }
+    &--fullname {
+      color: $colorBrandDark;
+    }
+    &--icon {
+      border: 2px solid $colorBrandLight;
+      color: $colorBrandDark;
+    }
+  }
+}
 
 // pallette 02
 
-// .palette02 {
-//   &--side {
-//     border-left: 5px solid $paletteTwoMedium;
-//   }
-//   &--fullname {
-//     color: $paletteTwoDark;
-//   }
-//   &--icon {
-//     border: 2px solid $paletteTwoLight;
-//     color: $paletteTwoDark;
-//   }
-// }
+.palette02 {
+  .color {
+    &--side {
+      border-left: 5px solid $paletteTwoMedium;
+    }
+    &--fullname {
+      color: $paletteTwoDark;
+    }
+    &--icon {
+      border: 2px solid $paletteTwoLight;
+      color: $paletteTwoDark;
+    }
+  }
+}
 
 // palette 03
 
-// .palette03 {
-//   &--side {
-//     border-left: 5px solid $paletteThreeMedium;
-//   }
-//   &--fullname {
-//     color: $paletteThreeDark;
-//   }
-//   &--icon {
-//     border: 2px solid $cpaletteThreeLight;
-//     color: $paletteThreeDark;
-//   }
-// }
+.palette03 {
+  .color {
+    &--side {
+      border-left: 5px solid $paletteThreeMedium;
+    }
+    &--fullname {
+      color: $paletteThreeDark;
+    }
+    &--icon {
+      border: 2px solid $paletteThreeLight;
+      color: $paletteThreeDark;
+    }
+  }
+}
