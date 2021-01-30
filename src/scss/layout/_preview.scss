@@ -43,10 +43,8 @@
   .card {
     &__name {
       padding-left: 15px;
-      border-left: 5px solid $colorBrandMedium;
       &--fullname {
         font-family: $fontPreview;
-        color: $colorBrandDark;
         font-weight: bold;
         @include t(18px, 1.11);
       }
@@ -69,16 +67,12 @@
         height: 32px;
         @include center;
         font-size: 18px;
-        border: 2px solid $colorBrandLight;
         border-radius: 50%;
         margin-right: 10px;
-        color: $colorBrandDark;
       }
     }
   }
 }
-
-// pallette 01
 
 .palette01 {
   .color {
@@ -95,8 +89,6 @@
   }
 }
 
-// pallette 02
-
 .palette02 {
   .color {
     &--side {
@@ -111,8 +103,6 @@
     }
   }
 }
-
-// palette 03
 
 .palette03 {
   .color {
