@@ -6,7 +6,9 @@ const legendComparteElement = document.querySelector(".legend__comparte");
 const collapsableElement = document.querySelector(".collapsable");
 
 function handleCollapsable() {
+
   collapsableElement.classList.toggle("collapsable--on");
+
 }
 
 legendDesignElement.addEventListener("click", handleCollapsable);
