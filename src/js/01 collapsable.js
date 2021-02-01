@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //solo afecta a diseña pq al efectar a legend solo afecta al primer hijo.
 // const legendDesignElement = document.querySelector(".legend__design");
 // const legendRellenaElement = document.querySelector(".legend__rellena");
@@ -15,15 +15,14 @@
 // legendRellenaElement.addEventListener("click", handleCollapsable);
 // legendComparteElement.addEventListener("click", handleCollapsable);
 
-
-const legendElements = document.querySelectorAll('.legend');
+const legendElements = document.querySelectorAll(".legend");
 // const collapsableElements = document.querySelectorAll('.collapsable');
 /* console.log(legendElements[0].parentElement); */
 
 function handleCollapsable(event) {
-  const collapsableElement = event.currentTarget.parentElement;
-  collapsableElement.classList.toggle('collapsable--on');
+  const collapsableElement = event.currentTarget.closest(".collapsable");
+  collapsableElement.classList.toggle("collapsable--on");
 }
 for (const legendElement of legendElements) {
-  legendElement.addEventListener('click', handleCollapsable);
+  legendElement.addEventListener("click", handleCollapsable);
 }
