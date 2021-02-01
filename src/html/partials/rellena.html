@@ -11,11 +11,11 @@
     <div class="field">
       <label class="field__label" for="completeName">Nombre completo </label>
       <input
-        class="field__input js-fullname"
+        class="field__input js-fullname js-input-text"
         placeholder="Ej: Sally Jill"
         id="completeName"
         type="text"
-        name="completeName"
+        name="name"
         required
       />
     </div>
@@ -23,10 +23,10 @@
     <div class="field">
       <label class="field__label" for="position">Puesto</label>
       <input
-        class="field__input js-position"
+        class="field__input js-position js-input-text"
         id="position"
         type="text"
-        name="position"
+        name="job"
         placeholder="Ej: Front-end unicorn"
         required
       />
@@ -40,6 +40,7 @@
           id="profile-image"
           type="submit"
           value="Añadir imagen"
+          name="photo"
         />
         <div class="rellena-image__square"></div>
       </div>
@@ -48,10 +49,10 @@
     <div class="field">
       <label class="field__label" for="emailAddress">Email</label>
       <input
-        class="field__input js-email"
+        class="field__input js-email js-input-text"
         id="emailAddress"
         type="email"
-        name="emailAddress"
+        name="email"
         placeholder="Ej: sally.hill@gmail.com"
         required
       />
@@ -60,19 +61,18 @@
     <div class="field">
       <label class="field__label" for="telephone">Teléfono</label>
       <input
-        class="field__input js-phone"
+        class="field__input js-phone js-input-text"
         id="telephone"
         type="tel"
-        name="telephone"
+        name="phone"
         placeholder="Ej: 555-55-55-55"
-        required
       />
     </div>
 
     <div class="field">
       <label class="field__label" for="linkedin">Linkedin</label>
       <input
-        class="field__input js-linkedin"
+        class="field__input js-linkedin js-input-text"
         id="linkedin"
         type="text"
         name="linkedin"
@@ -83,7 +83,7 @@
     <div class="field">
       <label class="field__label" for="github">Github</label>
       <input
-        class="field__input js-github"
+        class="field__input js-github js-input-text"
         id="github"
         type="text"
         name="github"

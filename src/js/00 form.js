@@ -1,6 +1,6 @@
 'use strict';
 
-// acceso input nombre
+/* // acceso input nombre
 
 const fullnameElement = document.querySelector('.js-fullname');
 const fullnamePreviewElement = document.querySelector('.js-fullnamePreview');
@@ -100,4 +100,4 @@ function handleGithub(event) {
 
 }
 
-githubElement.addEventListener('keyup', handleGithub);
+githubElement.addEventListener('keyup', handleGithub); */
