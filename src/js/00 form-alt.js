@@ -113,4 +113,4 @@ for (const inputTextElement of inputTextElements) {
   inputTextElement.addEventListener('keyup', updateAllInputs);
 }
 
-/* updateAllInputs();   *
+updateAllInputs();
