@@ -26,6 +26,9 @@
 
 .rellena-image {
   display: flex;
+  &__hidden {
+    display: none;
+  }
   &__add {
     width: 140px;
     height: 30px;
@@ -45,5 +48,7 @@
     height: 30px;
     margin: 7px 20px 0 0;
     border: 1px solid $colorBrandLight;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }

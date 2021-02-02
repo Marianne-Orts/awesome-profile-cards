@@ -56,7 +56,12 @@
       }
     }
     &__photo {
-      padding: 10px 0;
+      margin: 10px 0;
+      width: 240px;
+      height: 200px;
+      background-image: url("../images/image-default.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
     }
     &__icons {
       list-style-type: none;
