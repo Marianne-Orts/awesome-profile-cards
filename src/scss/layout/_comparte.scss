@@ -9,6 +9,7 @@
     height: 50px;
     border-radius: 12px;
     background-color: $colorBrandSide;
+    outline: none;
     @include center;
     @include t(18px, normal);
     text-transform: uppercase;
@@ -17,6 +18,9 @@
     font-family: $fontMain;
     font-weight: 600;
     justify-content: space-evenly;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

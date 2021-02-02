@@ -23,6 +23,7 @@
     height: 30px;
     background-color: transparent;
     border: 1px solid white;
+    outline: none;
     border-radius: 15px;
     font-family: $fontMain;
     color: $colorTextDark;
@@ -30,6 +31,9 @@
     text-transform: uppercase;
     @include center;
     justify-content: space-evenly;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__card {
     align-self: start;

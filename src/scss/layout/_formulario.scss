@@ -18,6 +18,9 @@
     flex-grow: 1;
     @include formTitle;
   }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .main__form {

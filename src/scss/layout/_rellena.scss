@@ -35,11 +35,15 @@
     margin: 7px 20px 0 0;
     border-radius: 3px;
     background-color: $colorBrandSide;
+    outline: none;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.68);
     color: white;
     font-family: $fontMain;
     font-size: 14px;
     text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__square {
     flex-direction: row;

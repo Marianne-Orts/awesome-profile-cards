@@ -46,6 +46,7 @@
   height: 30px;
   margin-top: 7px;
   border: 1px solid $colorBrandLight;
+  outline: none;
   color: $colorTextLight;
   text-indent: 9px;
   @include tablet {
