@@ -5,6 +5,7 @@ const uploadBtn = document.querySelector(".js__profile-trigger");
 const fileField = document.querySelector(".js__profile-upload-btn");
 const profileImage = document.querySelector(".js__profile-image");
 const profilePreview = document.querySelector(".js__profile-preview");
+let photo = "../images/image-default.jpg";
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -30,10 +31,22 @@ function writeImage() {
    * podemos pasarlo como background a la imagen de perfil y a la vista previa
    * de nuestro componente.
    */
-  profileImage.style.backgroundImage = `url(${fr.result})`;
-  profilePreview.style.backgroundImage = `url(${fr.result})`;
-}
+  photo = fr.result;
+  updatePhoto();
+  // después de cualquier acción del usuario guardo en el local storage
+  console.log("--------------------photo-----------------------------");
+  userData.photo = photo;
+  saveInLocalStorage();
 
+  /*  profileImage.style.backgroundImage = `url(${fr.result})`;
+  profilePreview.style.backgroundImage = `url(${fr.result})`; */
+}
+function updatePhoto() {
+  //ruta futura con API "//beta.adalab.es/resources/images/image-default.jpg" cambiar antes de hacer run docs
+  const currentPhoto = photo;
+  profilePreview.style.backgroundImage = `url(${currentPhoto})`;
+  profileImage.style.backgroundImage = `url(${currentPhoto})`;
+}
 /**
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
