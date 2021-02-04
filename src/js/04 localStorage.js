@@ -19,6 +19,7 @@ Recuperar del local storage:
 
 // cuando la usuaria cambia cualquier cosa en el formulario debemos llamar a esta función
 function saveInLocalStorage() {
+  // debugger;
   // obtengo los valores de todos los campos
   // const userData = {
   //   photo: photo,
@@ -46,6 +47,7 @@ function getFromLocalStorage() {
   // compruebo si hay datos válidos, es decir si la usuaria ya había entrado en nuestra web anteriormente
   if (userDataInString !== null) {
     const userData = JSON.parse(userDataInString);
+
     // actualizo los inputs del formulario
     document.querySelector(".js-fullname").value = userData.name;
     document.querySelector(".js-position").value = userData.job;
@@ -55,11 +57,11 @@ function getFromLocalStorage() {
     document.querySelector(".js-github").value = userData.github;
     // actualizo la variable global de la foto
     photo = userData.photo;
-    // debugger
     // actualizo la paleta, para ello
     // - Recorro las 3 paletas
     // - Compruebo cuál tiene el valor que tengo en el local storage
     // - A la paleta que tiene el valor correcto le hago un .checked = true para activarla
+
     const paletteElements = document.querySelectorAll(".js-palette");
     for (const paletteElement of paletteElements) {
       if (paletteElement.value === userData.palette) {
@@ -67,11 +69,11 @@ function getFromLocalStorage() {
       }
     }
     console.log("he recorrido getLocalStorage");
-
+    debugger;
     // propago los datos desde el formulario a la tarjeta
+    updatePhoto();
     updateAllInputs();
     handlePalette();
-    updatePhoto();
   }
 }
 

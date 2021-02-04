@@ -32,11 +32,10 @@ function writeImage() {
    * de nuestro componente.
    */
   photo = fr.result;
+  debugger;
   updatePhoto();
   // después de cualquier acción del usuario guardo en el local storage
   console.log("--------------------photo-----------------------------");
-  userData.photo = photo;
-  saveInLocalStorage();
 
   /*  profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`; */
@@ -47,6 +46,8 @@ function updatePhoto() {
     photo || "//localhost:3000/assets/images/image-default.jpg";
   profilePreview.style.backgroundImage = `url(${currentPhoto})`;
   profileImage.style.backgroundImage = `url(${currentPhoto})`;
+  userData.photo = photo;
+  saveInLocalStorage();
 }
 /**
  * Genera un click automático en nuesto campo de tipo "file"
