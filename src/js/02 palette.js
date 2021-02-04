@@ -8,12 +8,11 @@ function handlePalette() {
   const checkedPaletteValue = checkedPalette.value;
   cardElement.classList.add("palette" + checkedPaletteValue);
   userData.palette = checkedPaletteValue;
-  console.log(userData);
   saveInLocalStorage();
 }
 
 for (const paletteElement of paletteElements) {
-  paletteElement.addEventListener("change", handlePalette);
+  paletteElement.addEventListener("click", handlePalette);
 }
 
-handlePalette();
+// handlePalette();

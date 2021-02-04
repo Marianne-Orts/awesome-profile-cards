@@ -20,26 +20,29 @@ Recuperar del local storage:
 // cuando la usuaria cambia cualquier cosa en el formulario debemos llamar a esta función
 function saveInLocalStorage() {
   // obtengo los valores de todos los campos
-  /* const userData = {
-    photo: photo,
-    palette: document.querySelector(".js-palette:checked").value,
-    name: document.querySelector(".js-fullname").value,
-    job: document.querySelector(".js-position").value,
-    email: document.querySelector(".js-email").value,
-    phone: document.querySelector(".js-phone").value,
-    linkedin: document.querySelector(".js-linkedin").value,
-    github: document.querySelector(".js-github").value, 
-  }; */
+  // const userData = {
+  //   photo: photo,
+  //   palette: document.querySelector(".js-palette:checked").value,
+  //   name: document.querySelector(".js-fullname").value,
+  //   job: document.querySelector(".js-position").value,
+  //   email: document.querySelector(".js-email").value,
+  //   phone: document.querySelector(".js-phone").value,
+  //   linkedin: document.querySelector(".js-linkedin").value,
+  //   github: document.querySelector(".js-github").value,
+  // };
   // lo convierto a string porque local storage solo admite strings
   const userDataInString = JSON.stringify(userData);
   // lo guardo en el local storage en el campo que me apetece
   localStorage.setItem("userData", userDataInString);
+  console.log(userDataInString);
 }
 
 // al arrancar la página recogemos los datos desde el local storage y actualizamos el formulario
 function getFromLocalStorage() {
   // obtengo los datos desde el local storage
+  console.log("start getlocalstorage");
   const userDataInString = localStorage.getItem("userData");
+  console.log(`userdatainstring ${userDataInString}`);
   // compruebo si hay datos válidos, es decir si la usuaria ya había entrado en nuestra web anteriormente
   if (userDataInString !== null) {
     const userData = JSON.parse(userDataInString);
@@ -52,6 +55,7 @@ function getFromLocalStorage() {
     document.querySelector(".js-github").value = userData.github;
     // actualizo la variable global de la foto
     photo = userData.photo;
+    // debugger
     // actualizo la paleta, para ello
     // - Recorro las 3 paletas
     // - Compruebo cuál tiene el valor que tengo en el local storage
@@ -62,9 +66,11 @@ function getFromLocalStorage() {
         paletteElement.checked = true;
       }
     }
+    console.log("he recorrido getLocalStorage");
+
     // propago los datos desde el formulario a la tarjeta
     updateAllInputs();
-    updatePalette();
+    handlePalette();
     updatePhoto();
   }
 }
@@ -81,3 +87,4 @@ Por ello en la función getFromLocalStorage podría haber usado :
 document.querySelector(`.js-palette[value="${userData.palette}"]`).checked = true;
 Más info de selectores de atributos: https://developer.mozilla.org/es/docs/Web/CSS/Selectores_atributo
 */
+getFromLocalStorage();

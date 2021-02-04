@@ -5,7 +5,7 @@ const uploadBtn = document.querySelector(".js__profile-trigger");
 const fileField = document.querySelector(".js__profile-upload-btn");
 const profileImage = document.querySelector(".js__profile-image");
 const profilePreview = document.querySelector(".js__profile-preview");
-let photo = "../images/image-default.jpg";
+let photo = "";
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
@@ -43,7 +43,8 @@ function writeImage() {
 }
 function updatePhoto() {
   //ruta futura con API "//beta.adalab.es/resources/images/image-default.jpg" cambiar antes de hacer run docs
-  const currentPhoto = photo;
+  const currentPhoto =
+    photo || "//localhost:3000/assets/images/image-default.jpg";
   profilePreview.style.backgroundImage = `url(${currentPhoto})`;
   profileImage.style.backgroundImage = `url(${currentPhoto})`;
 }
