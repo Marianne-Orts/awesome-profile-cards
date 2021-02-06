@@ -1,27 +1,39 @@
-<fieldset class="rellena collapsable">
-  <include
-    src="./colapsable.html"
-    faClass="far fa-keyboard"
-    title="Rellena"
-    jsLegend="legend__rellena"
-  >
-  </include>
+<fieldset class="rellena">
+  <div class="rellena__icon">
+    <include src="./icons.html" faClass="far fa-keyboard" title="Rellena">
+    </include>
+  </div>
+  <div class="field">
+    <label class="field__label" for="completeName"
+      >Nombre completo<span> *</span></label
+    >
+    <input
+      class="field__input"
+      placeholder="Ej: Sally Jill"
+      id="completeName"
+      type="text"
+      name="completeName"
+      required
+    />
+  </div>
 
-  <div class="collapsable--hide">
-    <div class="field">
-      <label class="field__label" for="completeName">Nombre completo </label>
-      <input
-        class="field__input js-fullname js-input-text"
-        placeholder="Ej: Sally Jill"
-        id="completeName"
-        type="text"
-        name="name"
-        required
-      />
-    </div>
+  <div class="field">
+    <label class="field__label" for="position">Puesto<span> *</span></label>
+    <input
+      class="field__input"
+      id="position"
+      type="text"
+      name="position"
+      placeholder="Ej: Front-end unicorn"
+      required
+    />
+  </div>
 
-    <div class="field">
-      <label class="field__label" for="position">Puesto</label>
+  <div class="field">
+    <label class="field__label" for="profile-image"
+      >Imagen de perfil<span> *</span></label
+    >
+    <div class="rellena-image">
       <input
         class="field__input js-position js-input-text"
         id="position"
@@ -32,24 +44,17 @@
       />
     </div>
 
-    <div class="field">
-      <label class="field__label" for="profile-image">Imagen de perfil</label>
-      <div class="rellena-image">
-        <input
-          type="file"
-          class="js__profile-upload-btn rellena-image__hidden"
-        />
-        <input
-          class="rellena-image__add js__profile-trigger"
-          id="profile-image"
-          type="button"
-          value="Añadir imagen"
-          name="photo"
-          title="sube aquí tu foto, preferentemente cuadrada y bonita"
-        />
-        <div class="rellena-image__square js__profile-preview"></div>
-      </div>
-    </div>
+  <div class="field">
+    <label class="field__label" for="emailAddress">Email<span> *</span></label>
+    <input
+      class="field__input"
+      id="emailAddress"
+      type="email"
+      name="emailAddress"
+      placeholder="Ej: sally.hill@gmail.com"
+      required
+    />
+  </div>
 
     <div class="field">
       <label class="field__label" for="emailAddress">Email</label>
@@ -63,38 +68,26 @@
       />
     </div>
 
-    <div class="field">
-      <label class="field__label" for="telephone">Teléfono</label>
-      <input
-        class="field__input js-phone js-input-text"
-        id="telephone"
-        type="tel"
-        name="phone"
-        placeholder="Ej: 555-55-55-55"
-      />
-    </div>
-
-    <div class="field">
-      <label class="field__label" for="linkedin">Linkedin</label>
-      <input
-        class="field__input js-linkedin js-input-text"
-        id="linkedin"
-        type="text"
-        name="linkedin"
-        placeholder="Ej: linkedin.com/in/sally-hill"
-        required
-      />
-    </div>
-    <div class="field">
-      <label class="field__label" for="github">Github</label>
-      <input
-        class="field__input js-github js-input-text"
-        id="github"
-        type="text"
-        name="github"
-        placeholder="Ej: @sally-hill"
-        required
-      />
-    </div>
+  <div class="field">
+    <label class="field__label" for="linkedin">Linkedin<span> *</span></label>
+    <input
+      class="field__input"
+      id="linkedin"
+      type="text"
+      name="linkedin"
+      placeholder="Ej: linkedin.com/in/sally-hill"
+      required
+    />
+  </div>
+  <div class="field">
+    <label class="field__label" for="github">Github<span> *</span></label>
+    <input
+      class="field__input"
+      id="github"
+      type="text"
+      name="github"
+      placeholder="Ej: @sally-hill"
+      required
+    />
   </div>
 </fieldset>
