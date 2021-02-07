@@ -7,9 +7,12 @@ function handlePalette() {
   const checkedPalette = document.querySelector(".js-palette:checked");
   const checkedPaletteValue = checkedPalette.value;
   cardElement.classList.add("palette" + checkedPaletteValue);
-}
-for (const paletteElement of paletteElements) {
-  paletteElement.addEventListener("change", handlePalette);
+  userData.palette = checkedPaletteValue;
+  saveInLocalStorage();
 }
 
-handlePalette();
+for (const paletteElement of paletteElements) {
+  paletteElement.addEventListener("click", handlePalette);
+}
+
+// handlePalette();
