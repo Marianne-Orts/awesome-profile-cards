@@ -69,11 +69,12 @@ function getFromLocalStorage() {
       }
     }
     console.log("he recorrido getLocalStorage");
-    debugger;
+
     // propago los datos desde el formulario a la tarjeta
-    updatePhoto();
+
     updateAllInputs();
     handlePalette();
+    updatePhoto();
   }
 }
 
