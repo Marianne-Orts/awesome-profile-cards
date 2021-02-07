@@ -5,6 +5,7 @@ function handleResetBtn() {
   console.log("estoy funcionando");
   resetLocalStorage();
   getFromLocalStorage();
+  hiddenElement.classList.add("comparte__nav2--hidden");
 }
 function resetUserData() {
   (userData.photo = ""),

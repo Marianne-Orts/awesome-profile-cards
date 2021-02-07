@@ -66,6 +66,9 @@
     font-family: $fontMain;
     text-decoration: none;
   }
+  &--hidden {
+    display: none;
+  }
 }
 
 .fa-twitter {
