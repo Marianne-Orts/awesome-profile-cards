@@ -32,7 +32,7 @@ function writeImage() {
    * de nuestro componente.
    */
   photo = fr.result;
-  debugger;
+
   updatePhoto();
   // después de cualquier acción del usuario guardo en el local storage
   console.log("--------------------photo-----------------------------");

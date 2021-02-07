@@ -114,7 +114,6 @@ function updateAllInputs() {
       // actualizo la tarjeta
       cardElement.href = newValue;
     }
-    console.log("-------------------------------------------------");
   }
   saveInLocalStorage();
 }

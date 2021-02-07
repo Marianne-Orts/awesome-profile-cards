@@ -35,15 +35,14 @@ function saveInLocalStorage() {
   const userDataInString = JSON.stringify(userData);
   // lo guardo en el local storage en el campo que me apetece
   localStorage.setItem("userData", userDataInString);
-  console.log(userDataInString);
 }
 
 // al arrancar la página recogemos los datos desde el local storage y actualizamos el formulario
 function getFromLocalStorage() {
   // obtengo los datos desde el local storage
-  console.log("start getlocalstorage");
+
   const userDataInString = localStorage.getItem("userData");
-  console.log(`userdatainstring ${userDataInString}`);
+
   // compruebo si hay datos válidos, es decir si la usuaria ya había entrado en nuestra web anteriormente
   if (userDataInString !== null) {
     const userData = JSON.parse(userDataInString);
@@ -68,10 +67,30 @@ function getFromLocalStorage() {
         paletteElement.checked = true;
       }
     }
-    console.log("he recorrido getLocalStorage");
 
     // propago los datos desde el formulario a la tarjeta
 
+    updateAllInputs();
+    handlePalette();
+    updatePhoto();
+  } else {
+    // actualizo los inputs del formulario
+    document.querySelector(".js-fullname").value = userData.name;
+    document.querySelector(".js-position").value = userData.job;
+    document.querySelector(".js-email").value = userData.email;
+    document.querySelector(".js-phone").value = userData.phone;
+    document.querySelector(".js-linkedin").value = userData.linkedin;
+    document.querySelector(".js-github").value = userData.github;
+    // actualizo la variable global de la foto
+    photo = userData.photo;
+    const paletteElements = document.querySelectorAll(".js-palette");
+    for (const paletteElement of paletteElements) {
+      if (paletteElement.id === "paletteOne") {
+        paletteElement.checked = true;
+      } else {
+        paletteElement.checked = false;
+      }
+    }
     updateAllInputs();
     handlePalette();
     updatePhoto();
