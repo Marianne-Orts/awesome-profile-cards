@@ -38,7 +38,7 @@
   &__card {
     align-self: start;
     width: 240px;
-    height: 329px;
+    min-height: 329px;
     background-color: white;
     border-radius: 2px;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
@@ -46,7 +46,7 @@
   }
   .card {
     &__name {
-      padding-left: 15px;
+      padding: 0 15px;
       &--fullname {
         font-family: $fontPreview;
         font-weight: bold;
