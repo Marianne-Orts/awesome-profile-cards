@@ -58,6 +58,9 @@
     padding-top: 3px;
     margin-top: 10px;
     margin-bottom: 30px;
+    &:visited {
+      color: white;
+    }
   }
   &--link2 {
     color: white;
