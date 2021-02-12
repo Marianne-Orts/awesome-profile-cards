@@ -14,5 +14,3 @@ function handlePalette() {
 for (const paletteElement of paletteElements) {
   paletteElement.addEventListener("click", handlePalette);
 }
-
-// handlePalette();

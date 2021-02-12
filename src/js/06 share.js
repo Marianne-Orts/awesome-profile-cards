@@ -3,7 +3,6 @@
 const createBtn = document.querySelector(".js-create-btn");
 const cardResultElement = document.querySelector(".js-card-result");
 const hiddenElement = document.querySelector(".js-hidden-div");
-// twitter
 const twitterBtnElement = document.querySelector(".js-twitter");
 function handleCreateBtn(ev) {
   ev.preventDefault();
@@ -19,20 +18,20 @@ function handleCreateBtn(ev) {
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      console.log("Server response:", data);
-      if (data.success === true) {
-        cardResultElement.innerHTML = data.cardURL;
-        cardResultElement.href = data.cardURL;
-        twitterBtnElement.href = `https://twitter.com/intent/tweet?text=Mi%20nueva%20tarjeta%20${data.cardURL}`;
-      } else {
-        cardResultElement.innerHTML = data.error;
-      }
-    });
-  disableBtn()
+    .then(handleData);
+  disableBtn();
 }
 createBtn.addEventListener("click", handleCreateBtn);
-
 function disableBtn() {
-  createBtn.disabled=true;
+  createBtn.disabled = true;
+}
+
+function handleData(data){
+  if (data.success === true) {
+    cardResultElement.innerHTML = data.cardURL;
+    cardResultElement.href = data.cardURL;
+    twitterBtnElement.href = `https://twitter.com/intent/tweet?text=Mi%20nueva%20tarjeta%20${data.cardURL}`;
+  } else {
+    cardResultElement.innerHTML = data.error;
+  }
 }
