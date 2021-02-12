@@ -19,7 +19,8 @@ function writeImage() {
 function updatePhoto() {
   const currentPhoto =
     //photo || "//localhost:3000/assets/images/image-default.jpg";
-    photo || "//http://beta.adalab.es/Project-promo-l-module-2-team-8/assets/images/image-default.jpg";
+    photo ||
+    "http://beta.adalab.es/Project-promo-l-module-2-team-8/assets/images/image-default.jpg";
   profilePreview.style.backgroundImage = `url(${currentPhoto})`;
   profileImage.style.backgroundImage = `url(${currentPhoto})`;
   userData.photo = photo;
