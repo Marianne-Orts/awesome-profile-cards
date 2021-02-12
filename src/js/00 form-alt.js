@@ -1,11 +1,5 @@
 "use strict";
 
-// const fr = new FileReader();
-// const uploadBtn = document.querySelector('.js__profile-trigger');
-// const fileField = document.querySelector('.js__profile-upload-btn');
-// const profileImage = document.querySelector('.js__profile-image');
-// const profilePreview = document.querySelector('.js__profile-preview');
-
 const inputsTextConfig = [
   {
     inputClass: ".js-fullname",
@@ -71,57 +65,39 @@ const userData = {
 //-------------FUNCION-----------------
 
 function updateAllInputs() {
-  // recorro los 6 inputs del array inputsTextConfig
   for (const inputText of inputsTextConfig) {
-    // por cada objeto del array inputsTextConfig hago:
-
-    // obtengo el elemento input, el origen
     const inputElement = document.querySelector(inputText.inputClass);
 
-    // obtengo el elemento de la card, el destino
     const cardElement = document.querySelector(inputText.cardClass);
 
-    // obtengo el valor del input
     let newValue = inputElement.value;
 
-    userData[inputText.propertyName] = newValue; // guarda los datos de form , paleta y foto en el array
+    userData[inputText.propertyName] = newValue;
 
-    // compruebo si tengo que usar el innerHTML
     if (inputText.cardElementAttribute === "innerHTML") {
-      // compruebo si está vacío
       if (inputElement.value === "") {
         newValue = inputText.defaultValue;
       } else {
         newValue = inputElement.value;
       }
 
-      // actualizo la tarjeta
       cardElement.innerHTML = newValue;
-    }
-
-    //href, es decir si es el email, phone, linkedin o gihtub
-    else if (inputText.cardElementAttribute === "href") {
-      // compruebo si está vacío
+    } else if (inputText.cardElementAttribute === "href") {
       if (inputElement.value === "") {
         newValue = "#";
       } else {
-        // limpio prefijo
         newValue = newValue.replace(inputText.cardPrefix, "");
 
-        // vuelvo a añadir el prefijo https://www.linkedin.com/in/
         newValue = inputText.cardPrefix + newValue;
       }
-      // actualizo la tarjeta
+
       cardElement.href = newValue;
     }
   }
   saveInLocalStorage();
 }
 
-//array + listener
 const inputTextElements = document.querySelectorAll(".js-input-text");
 for (const inputTextElement of inputTextElements) {
   inputTextElement.addEventListener("keyup", updateAllInputs);
 }
-
-// updateAllInputs();

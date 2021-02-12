@@ -2,7 +2,6 @@
 
 function handleResetBtn() {
   resetUserData();
-  console.log("estoy funcionando");
   resetLocalStorage();
   getFromLocalStorage();
   hiddenElement.classList.add("comparte__nav2--hidden");
@@ -15,9 +14,7 @@ function resetUserData() {
     (userData.email = ""),
     (userData.phone = ""),
     (userData.linkedin = ""),
-    (userData.github = ""),
-    //updateAllInputs();
-    console.log("hola");
+    (userData.github = "")
 }
 
 function resetLocalStorage() {
