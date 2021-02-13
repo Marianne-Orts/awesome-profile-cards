@@ -6,27 +6,40 @@ const hiddenElement = document.querySelector(".js-hidden-div");
 const twitterBtnElement = document.querySelector(".js-twitter");
 function handleCreateBtn(ev) {
   ev.preventDefault();
-  hiddenElement.classList.remove("comparte__nav2--hidden");
-  console.log("Mis datos", getUserData());
-  const url = "https://profileawesome.herokuapp.com/card";
+  const url = "https://awesome-profile-cards.herokuapp.com/card";
   const data = getUserData();
-  fetch(url, {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then(handleData);
-  disableBtn();
+  hiddenElement.classList.remove("comparte__nav2--hidden");
+  if (data.name === "") {
+    cardResultElement.innerHTML = "Introduce tu nombre";
+  } else if (data.job === "") {
+    cardResultElement.innerHTML = "Introduce tu puesto";
+  } else if (data.photo === "") {
+    cardResultElement.innerHTML = "Adjunta tu foto";
+  } else if (data.email === "") {
+    cardResultElement.innerHTML = "Introduce tu email";
+  } else if (data.linkedin === "") {
+    cardResultElement.innerHTML = "Introduce el enlace de tu linkedin";
+  } else if (data.github === "") {
+    cardResultElement.innerHTML = "Introduce tu usuario de github";
+  } else {
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then(handleData)
+      .then(disableBtn);
+  }
 }
 createBtn.addEventListener("click", handleCreateBtn);
 function disableBtn() {
   createBtn.disabled = true;
 }
 
-function handleData(data){
+function handleData(data) {
   if (data.success === true) {
     cardResultElement.innerHTML = data.cardURL;
     cardResultElement.href = data.cardURL;
